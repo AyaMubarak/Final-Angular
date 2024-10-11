@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="my-4">Latest News</h2>
+  <app-image-slider></app-image-slider>
+  <div *ngFor="let newsItem of newsItems" class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ newsItem.title }}</h5>
+      <p class="card-text">{{ newsItem.description }}</p>
+     
+    </div>
+  </div>
+</div>
+
+

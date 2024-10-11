@@ -1,0 +1,38 @@
+<div class="card mt-4" style="background-color: #f8f9fa">
+  <div class="card-header">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="https://img.icons8.com/?size=100&id=11266&format=png&color=000000" alt="Vacation Icon" class="img-fluid" style="max-width: 32px; margin-right: 20px"/>
+        <h2>Pending Requests</h2>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row no-gutters">
+      <ng-container *ngFor="let request of vacationRequests">
+        <div class="col-md-3 col-sm-6 mb-4">
+          <div class="card" style="margin-right: 30px">
+            <div class="d-flex flex-column align-items-center mt-4 mb-4">
+              <img src="./images/download.jpg" class="card-img" alt="Employee Picture" style="border-radius: 50%; width: min-content"/>
+              <div class="card-body">
+                <h5 class="card-title">{{ request.name }}</h5>
+                <p class="card-text">
+                  <span class="span">Submitted on:</span> <br />{{ request.submissionDate }}
+                </p>
+                <p class="card-text">
+                  <span class="span">Duration:</span> <br />{{ request.duration }} ({{ request.startDate }} - {{ request.endDate }})
+                </p>
+                <p class="card-text">
+                  <span class="span">Currently at:</span> <br /><span class="color">{{ request.currentlyAt }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+</div>
+
+

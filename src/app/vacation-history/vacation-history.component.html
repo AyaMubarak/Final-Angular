@@ -1,0 +1,29 @@
+<div class="card" style="background-color: #f8f9fa">
+  <div class="card-header">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <img src="https://img.icons8.com/?size=100&id=11266&format=png&color=000000" alt="Vacation Icon" class="img-fluid" style="max-width: 32px; margin-right: 20px" />
+        <h2>History</h2>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row no-gutters">
+      <div *ngFor="let vacation of vacationHistory" class="col-md-4 col-sm-6 mb-4">
+        <div class="card">
+          <div class="d-flex flex-column align-items-center mt-4 mb-4">
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ vacation.title }}</h5>
+              <p class="card-text">
+                <span class="span">{{ vacation.startDate }} - {{ vacation.endDate }} <span class="bold">{{ vacation.duration }} days</span></span>
+              </p>
+              <p class="card-text">
+                <span class="span">Approved by: {{ vacation.name }} ({{ vacation.status }})</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

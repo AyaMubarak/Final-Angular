@@ -1,0 +1,68 @@
+<div class="row">
+  <div class="col-12 mb-3 mt-4">
+      <div class="card p-4 h-100" style="border-radius: 30px; background-color: #f8f9fa;">
+          <div class="row">
+              <div class="col-md-3 text-center">
+                  <img [src]="employee.profilePicture" class="img-fluid rounded-circle" alt="Profile Picture" style="width: 100px; height: 100px" />
+              </div>
+              <div class="col-md-9 d-flex align-items-center">
+                  <div class="d-flex justify-content-between w-100">
+                      <div>
+                          <h4>{{ employee.name }}</h4>
+                          <span class="text-muted">{{ employee.department }}</span>
+                          <p class="mb-0">{{ employee.position }}</p>
+                      </div>
+                      <a href="/profile" routerLink="/profile" class="btn btn-outline-success align-self-center">View Profile</a>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-md-2 d-flex align-items-start mb-3">
+                  <img [src]="employee.userPicture" alt="Reporting To" style="width: 20px; height: 20px; margin-right: 3px;" />
+                  <div>
+                      <h5>Reporting To:</h5>
+                      <p>{{ employee.reportingTo }}</p>
+                  </div>
+              </div>
+              <div class="col-md-2 d-flex align-items-start mb-3">
+                  <img [src]="employee.levelIcon" alt="Corporate Level" style="width: 20px; height: 20px; margin-right: 3px;" />
+                  <div>
+                      <h5>Corporate Level:</h5>
+                      <p>{{ employee.corporateLevel }}</p>
+                  </div>
+              </div>
+              <div class="col-md-2 d-flex align-items-start mb-3">
+                  <img [src]="employee.hourClockIcon" alt="Lifetime" style="width: 20px; height: 20px; margin-right: 3px;" />
+                  <div>
+                      <h5>Lifetime:</h5>
+                      <p>{{ employee.lifetime }}</p>
+                  </div>
+              </div>
+              <div class="col-md-2 d-flex align-items-start mb-3">
+                  <img [src]="employee.vacationIcon" alt="Vacation Days Left" style="width: 20px; height: 20px; margin-right: 3px;" />
+                  <div>
+                      <h5>Vacation Days Left:</h5>
+                      <p>{{ employee.vacationDaysLeft }}</p>
+                  </div>
+              </div>
+              <div class="col-md-2 d-flex align-items-start mb-3">
+                  <img [src]="employee.sickIcon" alt="Sick Days Left" style="width: 20px; height: 20px; margin-right: 3px;" />
+                  <div>
+                      <h5>Sick Days Left:</h5>
+                      <p>{{ employee.sickDaysLeft }}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
